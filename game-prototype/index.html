@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Dominion - Game Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../src/svg-world-map.js"></script>
+  </head>
+  <body>
+    <div class="game-shell">
+      <aside class="hud-panel">
+        <div class="brand-box">
+          <div class="brand-kicker">Strategy prototype</div>
+          <h1>World Dominion</h1>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span>Turn</span>
+            <strong id="turn-value">1</strong>
+          </div>
+          <div class="stat-card">
+            <span>Gold</span>
+            <strong id="gold-value">1200</strong>
+          </div>
+          <div class="stat-card">
+            <span>Army</span>
+            <strong id="army-value">230</strong>
+          </div>
+          <div class="stat-card">
+            <span>Influence</span>
+            <strong id="influence-value">66</strong>
+          </div>
+        </div>
+
+        <div class="country-panel" id="country-panel">
+          <div class="panel-label">Selected country</div>
+          <h2 id="country-name">None</h2>
+          <div class="meta-grid">
+            <div><span>Region</span><strong id="country-region">-</strong></div>
+            <div><span>Army</span><strong id="country-army">-</strong></div>
+            <div><span>Economy</span><strong id="country-economy">-</strong></div>
+            <div><span>Stability</span><strong id="country-stability">-</strong></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="deploy-btn" class="primary">Deploy +25 army</button>
+          <button id="next-turn-btn">Next turn</button>
+        </div>
+
+        <div class="log-panel">
+          <div class="panel-label">Command log</div>
+          <ul id="log-list">
+            <li>World map initialized.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="map-panel">
+        <div class="map-toolbar">
+          <div class="toolbar-title">Global theater</div>
+          <div class="toolbar-hint">Select a nation to expand your influence</div>
+        </div>
+        <div id="map-stage"></div>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
